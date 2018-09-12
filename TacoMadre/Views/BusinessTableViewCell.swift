@@ -8,17 +8,24 @@
 
 import UIKit
 
+// MARK: - BusinessTableViewCell
+
 class BusinessTableViewCell: UITableViewCell {
+    
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var businessNameLabel: UILabel!
+    @IBOutlet weak var businessImageView: UIImageView!
+    @IBOutlet weak var businessRating: UILabel!
+    @IBOutlet weak var businessDistance: UILabel!
+    
+    // MARK: - Life Cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }
