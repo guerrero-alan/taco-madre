@@ -99,14 +99,9 @@ struct HTTPRequestManager {
             
             do {
                 let rawResult = try JSONDecoder().decode(YelpServerResponse.self, from: data)
-                print("PO")
                 completion(.success(rawResult))
-                //String(data: data!, encoding: .utf8)
-                //print(rawResult)
             } catch {
-                print("LOS")
-                completion(.failure(RequestError.decoderFailure))
-                
+                completion(.failure(RequestError.decoderFailure))                
             }
         }
         dataTask.resume()
