@@ -8,7 +8,10 @@
 
 import Foundation
 
+// MARK: - RawYelpResponse
+
 struct RawYelpResponse: Codable {
+    
     struct Businesses: Codable {
         var name: String
         var categories: [Categories]
@@ -36,6 +39,8 @@ struct RawYelpResponse: Codable {
     var businesses: [Businesses]
 }
 
+// MARK: - Business
+
 struct Business {
     var name: String
     var image_url: String
@@ -59,6 +64,9 @@ extension Business: Hashable {
         return self.name.hashValue
     }
 }
+
+// MARK: - YelpServerResponse
+
 struct YelpServerResponse: Decodable {
     var businesses: [Business] = []
     
